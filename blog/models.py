@@ -15,7 +15,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("Category", related_name="posts")
-    # image = models.ImageField(upload_to='post_images/', null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
 
 
     def __str__(self):
@@ -26,7 +26,7 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey("Post", on_delete=models.CASCADE)
-    # attachment = models.FileField(upload_to='comment_attachments/', null=True, blank=True)
+    attachment = models.FileField(upload_to='comment_attachments/', null=True, blank=True)
     
     def __str__(self):
         return f"{self.author} on '{self.post}'"

@@ -2,6 +2,10 @@
 
 
 {% block page_title %}
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }} Image">
+{% endif %}
     <h2>{{ post.title }}</h2>
 {% endblock page_title %}
 
