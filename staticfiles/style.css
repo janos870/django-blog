@@ -1,0 +1,39 @@
+:root {
+    --primary-light: #fff;
+    --primary-dark: #161616;
+    --secondary-dark: #1e1e1e;
+}
+
+/* default styles */
+
+a {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--primary-dark);
+    opacity: 0.7;
+}
+body {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* header nav style */
+
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--primary-dark);
+        color: var(--primary-light);
+    }
+    a {
+        color: var(--primary-light);
+    }
+    a:hover {
+        color: var(--primary-light);
+        opacity: 0.7;
+    }
+}

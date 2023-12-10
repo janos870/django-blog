@@ -1,0 +1,139 @@
+:root {
+    --primary-light: #fff;
+    --primary-dark: #161616;
+    --secondary-dark: #1e1e1e;
+}
+
+/* default styles */
+
+body {
+    font-family: 'ABeeZee';
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    overflow-x: hidden;
+}
+a {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--primary-dark);
+    opacity: 0.7;
+}
+
+/* post list styles */
+
+.posts .card {
+    margin: 5px;
+}
+.posts .card small {
+    margin-bottom: 10px;
+}
+
+/* single post style */
+.post .card {
+    max-width: 900px;
+    margin: auto;
+}
+.post h3, small, p {
+    margin: 10px;
+}
+@media (max-width: 768px){
+    .post .card {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* comment form style */
+.form-control{
+    border: none;
+    outline: #1e1e1e;
+}
+.textarea {
+    border-bottom: 1px solid;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.comment-form {
+    display: flex;
+    justify-content: center;
+}
+.inputbx{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 10px auto;
+    width: 60%;
+}
+.send-btn{
+    position: relative;
+    margin-top: 200px;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .inputbx {
+        width: 80%;
+    }
+}
+
+/* post comment style */
+
+.comment-body {
+    max-width: 900px;
+    margin: 5px auto;
+}
+.commentBtn {
+    background: none;
+    border: none;
+    color: #3a7fe0;
+}
+.commentBtn:hover {
+    opacity: 0.7;
+}
+.full-text {
+    display: none;
+}
+
+@media (max-width: 768px){
+    .comment-body {
+        width: 90%;
+    }
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--primary-dark);
+        color: var(--primary-light);
+    }
+    a {
+        color: var(--primary-light);
+    }
+    a:hover {
+        color: var(--primary-light);
+        opacity: 0.7;
+    }
+    .card {
+        background-color: var(--secondary-dark);
+    }
+    .comment-form .form-control{
+        background-color: var(--primary-dark);
+        color: var(--primary-light);
+    }
+    form i {
+        color: var(--primary-light);
+    }
+    .commentBtn {
+        color: #3a7fe0;
+    }
+}

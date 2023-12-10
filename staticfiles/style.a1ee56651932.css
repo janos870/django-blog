@@ -1,0 +1,18 @@
+:root {
+    --primary-light: #fff;
+    --primary-dark: #161616;
+    --secondary-dark: #1e1e1e;
+}
+
+body {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--primary-dark);
+        color: var(--primary-light);
+    }
+}
