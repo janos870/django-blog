@@ -33,11 +33,15 @@
         <p>
           On {{ comment.created_on.date }} <b>{{ comment.author }}</b> wrote:
         </p>
+
         <div id="comment-text-{{ comment.id }}">
-          <p class="short-text">{{ comment.body |truncatechars:100 |linebreaks }}</p>
-          <p class="full-text">{{ comment.body |linebreaks }}</p>
-          <button class="commentBtn">Show more</button>
+          <span id="short-text-{{ comment.id }}">{{ comment.body|truncatechars:100|linebreaks }}</span>
+          <span id="full-text-{{ comment.id }}" class="full-text" style="display: none;">{{ comment.body|linebreaks }}</span>
         </div>
+
+        {% if comment.body|length > 100 %}
+        <button id="toggleBtn-{{ comment.id }}" class="toggle-btn" onclick="toggleComment({{ comment.id }})">Show more</button>
+        {% endif %}
       </div>
     {% endfor %}
   </div>

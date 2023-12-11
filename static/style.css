@@ -90,17 +90,15 @@ form {
     max-width: 900px;
     margin: 5px auto;
 }
-.commentBtn {
+.toggle-btn {
     background: none;
     border: none;
     color: #3a7fe0;
 }
-.commentBtn:hover {
+.toggle-btn:hover {
     opacity: 0.7;
 }
-.full-text {
-    display: none;
-}
+
 
 @media (max-width: 768px){
     .comment-body {
@@ -133,7 +131,7 @@ form {
     form i {
         color: var(--primary-light);
     }
-    .commentBtn {
+    .toggle-btn {
         color: #3a7fe0;
     }
 }

@@ -1,20 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".commentBtn");
+function toggleComment(commentId) {
+  const toggleBtn = document.getElementById(`toggleBtn-${commentId}`);
+  const shortText = document.getElementById(`short-text-${commentId}`);
+  const fullText = document.getElementById(`full-text-${commentId}`);
 
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      const commentText = this.parentElement.querySelector(".short-text");
-      const fullText = this.parentElement.querySelector(".full-text");
+  if (shortText.style.display === "none") {
+    shortText.style.display = "inline";
+    fullText.style.display = "none";
+    toggleBtn.innerText = "Show more";
+  } else {
+    shortText.style.display = "none";
+    fullText.style.display = "inline";
+    toggleBtn.innerText = "Show less";
+  }
+}
 
-      if (commentText.style.display === "none") {
-        commentText.style.display = "block";
-        fullText.style.display = "none";
-        this.innerHTML = "Show more";
-      } else {
-        commentText.style.display = "none";
-        fullText.style.display = "block";
-        this.innerHTML = "Show less";
-      }
-    });
-  });
-});
