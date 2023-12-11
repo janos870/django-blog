@@ -1,7 +1,9 @@
 :root {
     --primary-light: #fff;
+    --secondary-light: #eeeeee;
     --primary-dark: #161616;
     --secondary-dark: #1e1e1e;
+    --blue: #3a7fe0;
 }
 
 /* default styles */
@@ -77,6 +79,13 @@ form {
     border: none;
     background: none;
     cursor: pointer;
+    color: var(--blue);
+    transform: scale(1);
+    transition: 0.3s;
+}
+.send-btn:hover {
+    opacity: 0.7;
+    transform: scale(0.9);
 }
 @media (max-width: 768px){
     .inputbx {
@@ -93,10 +102,15 @@ form {
 .toggle-btn {
     background: none;
     border: none;
-    color: #3a7fe0;
+    color: var(--blue);
 }
 .toggle-btn:hover {
     opacity: 0.7;
+}
+.comment-content {
+    background-color: var(--secondary-light);
+    padding: 5px;
+    border-radius: 30px;
 }
 
 
@@ -131,7 +145,13 @@ form {
     form i {
         color: var(--primary-light);
     }
+    .send-btn i{
+        color: var(--blue);
+    }
     .toggle-btn {
-        color: #3a7fe0;
+        color: var(--blue);
+    }
+    .comment-content {
+        background-color: var(--secondary-dark);
     }
 }

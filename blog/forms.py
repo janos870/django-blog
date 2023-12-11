@@ -10,6 +10,6 @@ class CommentForm(forms.Form):
     )
     body = forms.CharField(
         widget=forms.TextInput(
-            attrs={"class": "form-control shadow-none", "placeholder": "Leave a comment!"}
+            attrs={"class": "form-control shadow-none", "placeholder": "Leave a comment!", "row": 1}
         )
     )
