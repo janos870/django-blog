@@ -1,12 +1,12 @@
+/* default styles */
+
 :root {
     --primary-light: #fff;
-    --secondary-light: #eeeeee;
+    --secondary-light: #FBFBFB;
     --primary-dark: #161616;
     --secondary-dark: #1e1e1e;
     --blue: #3a7fe0;
 }
-
-/* default styles */
 
 body {
     font-family: 'ABeeZee';
@@ -23,6 +23,7 @@ a:hover {
     opacity: 0.7;
 }
 
+
 /* post list styles */
 
 .posts .card {
@@ -36,6 +37,7 @@ a:hover {
 .post .card {
     max-width: 900px;
     margin: auto;
+    
 }
 .post h3, small, p {
     margin: 10px;
@@ -79,7 +81,6 @@ form {
     border: none;
     background: none;
     cursor: pointer;
-    color: var(--blue);
     transform: scale(1);
     transition: 0.3s;
 }
@@ -102,7 +103,6 @@ form {
 .toggle-btn {
     background: none;
     border: none;
-    color: var(--blue);
 }
 .toggle-btn:hover {
     opacity: 0.7;
@@ -113,13 +113,18 @@ form {
     border-radius: 30px;
 }
 
+/* footer style */
+
+footer a {
+    margin: 10px;
+}
+
 
 @media (max-width: 768px){
     .comment-body {
         width: 90%;
     }
 }
-
 
 
 
@@ -144,12 +149,6 @@ form {
     }
     form i {
         color: var(--primary-light);
-    }
-    .send-btn i{
-        color: var(--blue);
-    }
-    .toggle-btn {
-        color: var(--blue);
     }
     .comment-content {
         background-color: var(--secondary-dark);

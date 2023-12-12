@@ -23,14 +23,14 @@
       <div>{{ form.author }}</div>
       <div class="textarea">{{ form.body }}</div>
     </div>
-    <button class="send-btn" type="submit"><i class="fa fa-send-o fa-2x"></i></button>
+    <button class="send-btn" type="submit"><i class="fa fa-send-o fa-2x text-info"></i></button>
   </form>
 
   <div class="comment-body">
     <h3 class="my-5 ms-2">Comments:</h3>
     {% for comment in comments %}
       <div class="comment-content my-5">
-        <p>
+        <p class="text-info ">
           On {{ comment.created_on.date }} <b>{{ comment.author }}</b> wrote:
         </p>
 
@@ -40,7 +40,7 @@
         </div>
 
         {% if comment.body|length > 100 %}
-        <button id="toggleBtn-{{ comment.id }}" class="toggle-btn" onclick="toggleComment({{ comment.id }})">Show more</button>
+          <button id="toggleBtn-{{ comment.id }}" class="toggle-btn text-info " onclick="toggleComment({{ comment.id }})">Show more</button>
         {% endif %}
       </div>
     {% endfor %}
