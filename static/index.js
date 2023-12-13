@@ -14,3 +14,14 @@ function toggleComment(commentId) {
   }
 }
 
+const navbar = document.querySelector(".navbar");
+
+window.onscroll = function () {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  if (scrollPosition > 100) {
+    navbar.classList.add("change-background");
+  } else {
+    navbar.classList.remove("change-background");
+  }
+};

@@ -9,7 +9,9 @@
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card shadow">
               {% if post.image %}
-                <img src="{{ post.image.url }}" alt="{{ post.title }} Image" class="card-img-top" />
+                <a href="{% url 'blog_detail' post.pk %}">
+                  <img src="{{ post.image.url }}" alt="{{ post.title }} Image" class="card-img-top" />
+                </a>
               {% endif %}
               <div class="card-body">
                 <h5 class="card-title"><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h5>
@@ -18,7 +20,7 @@
                     <a href="{% url 'blog_category' category.name %}">{{ category.name }}</a>
                   {% endfor %}
                 </small>
-                <p class="card-text mt-3 ">{{ post.body|slice:':100' }}...</p>
+                <p class="card-text mt-3">{{ post.body|slice:':100' }}...</p>
               </div>
             </div>
           </div>
