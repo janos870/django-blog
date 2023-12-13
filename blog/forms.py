@@ -5,11 +5,11 @@ class CommentForm(forms.Form):
     author = forms.CharField(
         max_length=60,
         widget=forms.TextInput(
-            attrs={"class": "form-control shadow-none", "placeholder": "Your Name"}
+            attrs={"class": "form-control shadow-none", "placeholder": "Your Name:"}
         ),
     )
     body = forms.CharField(
         widget=forms.Textarea(
-            attrs={"class": "form-control shadow-none textarea", "placeholder": "Leave a comment!", "row": 0}
+            attrs={"class": "form-control shadow-none textarea", "placeholder": "Leave a comment:", "row": 0}
         )
     )
