@@ -28,9 +28,6 @@ a:hover {
 }
 
 /* post list styles */
-.posts .card {
-    margin: 5px;
-}
 .posts .card small {
     margin-bottom: 10px;
 }

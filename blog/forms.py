@@ -13,3 +13,4 @@ class CommentForm(forms.Form):
             attrs={"class": "form-control shadow-none textarea", "placeholder": "Leave a comment:", "row": 0}
         )
     )
+    

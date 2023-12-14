@@ -14,6 +14,7 @@ function toggleComment(commentId) {
   }
 }
 
+
 const navbar = document.querySelector(".navbar");
 
 window.onscroll = function () {

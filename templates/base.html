@@ -22,7 +22,10 @@
             <img src="{% static "/favicon_io/favicon-32x32.png" %}" alt="" class="me-2 d-inline-block align-text-center">
             My Personal Blog
           </div>
-          <a href="{% url "blog_index" %}">Home</a>
+          <div>
+            <a class="me-4" href="{% url "blog_index" %}">Home</a>
+            <a href="#"><i class="bi bi-search"></i></a>
+          </div>
         </div>
       </nav>
 

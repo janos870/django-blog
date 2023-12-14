@@ -3,11 +3,11 @@
 {% block page_content %}
   {% block posts %}
     <div class="posts container">
-      <h2 class="my-5">Blog Posts</h2>
+      <h2 class="my-5 ms-3">Blog Posts</h2>
       <div class="row">
         {% for post in posts %}
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card shadow">
+            <div class="card m-3 shadow">
               {% if post.image %}
                 <a href="{% url 'blog_detail' post.pk %}">
                   <img src="{{ post.image.url }}" alt="{{ post.title }} Image" class="card-img-top" />
