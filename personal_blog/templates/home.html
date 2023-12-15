@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "css/home.css?v=1.3" %}">
+    <title>Personal Blog</title>
+</head>
+<body class="home">
+    <nav class="navbar fixed-top py-3">
+        <div class="container-fluid mx-3">
+          <div class="navbar-brand d-flex" href="{% url "blog_index" %}">
+            <img src="{% static "/favicon_io/favicon-32x32.png" %}" alt="" class="me-2 d-inline-block align-text-center">
+            My Personal Blog
+          </div>
+          <div>
+            <a class="me-4" href="{% url 'home' %}">Home</a>
+            <a class="me-4" href="{% url 'blog_index' %}">Blog</a>
+            <a href="#"><i class="bi bi-search"></i></a>
+          </div>
+        </div>
+      </nav>
+
+    <header>
+        <div class="card-header">
+            <div class="ms-2">
+                <h1>Welcome to My Blog!</h1>
+                <h2>Exploring My Blog Site!</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aspernatur aut ratione. Quam cumque necessitatibus deleniti? Dolores asperiores quibusdam repellat cum facere tenetur dolorem ipsa aspernatur quasi quia officiis sunt mollitia deserunt impedit quos id, facilis incidunt veritatis doloremque itaque ipsam nisi? Molestiae mollitia nostrum velit veritatis, harum eveniet saepe?</p>
+        </div>
+    </header>
+
+    <main class="container text-center mt-5 ">
+        <div>
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sit temporibus amet delectus eius eveniet nemo. Sequi mollitia facere ea magni. Fugit odio dicta amet laudantium beatae adipisci inventore sint temporibus optio modi aut dolor, quam ut tenetur voluptas aliquam sit fuga laboriosam eaque, sunt, dolore quibusdam? Error aperiam in magni nesciunt, voluptates eos soluta consequatur sint, labore debitis possimus consectetur! Quaerat voluptates odio quo quis totam debitis voluptatum, temporibus voluptatibus maxime pariatur eaque magnam architecto cumque facilis a nobis ab fugit suscipit sunt enim perspiciatis provident iste vero? Architecto ipsum quibusdam impedit vero, esse veniam mollitia nisi officiis doloremque.</p>
+        </div>
+
+        <div class="mt-5">
+            <h2>Contact Us</h2>
+        </div>
+    </main>
+
+
+
+    <footer class="footer p-4 mt-5 d-flex justify-content-between align-items-center flex-column flex-sm-row text-center">
+        <div class="ms-lg-5 ">
+          <p>
+            This Website was made with <img src="{% static "Django.gif" %}" alt="django" width="30" />
+          </p>
+        </div>
+        <div class="me-lg-5 ">
+          <a  href=""><i class="bi bi-facebook h5  "></i></a>
+          <a  href=""><i class="bi bi-instagram h5"></i></a>
+          <a  href=""><i class="bi bi-tiktok h5"></i></a>
+        </div>
+    </footer>
+    
+    <script src="{% static "index.js?v=1.1" %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

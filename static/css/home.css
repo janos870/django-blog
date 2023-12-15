@@ -1,0 +1,98 @@
+:root {
+    --primary-light: #fff;
+    --secondary-light: #f8f9fa;
+    --primary-dark: #161616;
+    --secondary-dark: #1e1e1e;
+}
+
+body.home {
+    padding-top: 0;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.change-background {
+   background-color: #4e4e4e;
+}
+
+.navbar a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: var(--primary-dark);
+    opacity: 0.7;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+    opacity: 0.8;
+}
+
+.navbar-brand {
+    color: var(--primary-light);
+}
+
+header {
+    background-image: url("../img/office.jpg");
+    padding-top: 100px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--primary-light);
+    opacity: 0.8;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+header .card-header {
+    margin-top: 100px;
+    width: 70%;
+}
+
+/* footer style */
+.footer {
+    background-color: var(--secondary-light);
+}
+.footer a {
+    margin: 10px;
+    color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+    header .card-header {
+        width: 100%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body.home {
+        background-color: var(--primary-dark);
+        color: var(--primary-light);
+    }
+
+    .change-background {
+        background-color: var(--secondary-dark);  
+    }
+
+    .footer {
+        background-color: var(--secondary-dark);
+    }
+    form i {
+        color: var(--primary-light);
+    }
+
+    .navbar a {
+        color: var(--primary-light);
+    }
+    .footer a {
+        color: var(--primary-light);
+    }
+    a:hover {
+        color: var(--primary-light);
+        opacity: 0.7;
+    }
+}
