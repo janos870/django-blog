@@ -59,7 +59,8 @@ a:hover {
     border-bottom: 1px solid;
     outline: none;
     resize: none;
-    height: 50px
+    height: 50px;
+
 }
 form {
     display: flex;
@@ -88,9 +89,9 @@ form {
     cursor: pointer;
     transform: scale(1);
     transition: 0.3s;
-    position: absolute;
-    right: 0;
-    bottom: 5px;
+    /* position: absolute;
+    right: 20px;
+    bottom: 5px; */
 
 }
 .send-btn:hover {
