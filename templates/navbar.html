@@ -1,0 +1,50 @@
+{% load static %} 
+{% comment %} <nav class="navbar d-flex justify-content-lg-center fixed-top py-3">
+  <div class="container-fluid ">
+  <a class="navbar-brand d-flex align-content-center ms-3" href="{% url 'blog_index' %}">
+    <img src="{% static '/favicon_io/favicon-32x32.png' %}" alt="" class="me-2 d-inline-block align-text-center" />
+    My Personal Blog
+  </a>
+  <div class="navbar-item ms-5">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'blog_index' %}">Blog</a>
+      {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Log Out</a>
+        <a href="#">Hi, {{ user.username }}!</a>
+      {% else %}
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+      {% endif %}
+    </div>
+  </div>
+</nav> {% endcomment %}
+
+
+<!-- A navigációs sáv része -->
+ <nav class="navbar navbar-expand-lg fixed-top py-3">
+  <a class="navbar-brand d-flex align-content-center ms-lg-5" href="{% url 'blog_index' %}">
+      <img src="{% static '/favicon_io/favicon-32x32.png' %}" alt="" class="me-2 d-inline-block align-text-center" />
+      My Personal Blog
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="bi bi-list"></i>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto me-lg-5">
+          <a class="" href="{% url 'home' %}">Home</a>
+          <a class="" href="{% url 'blog_index' %}">Blog</a>
+
+          {% if user.is_authenticated %}
+              <a class="" href="{% url 'logout' %}">Log Out</a>
+              <a class="border rounded-pill px-3 py-2" href="#">Hi, {{ user.username }}!</a>
+          {% else %}
+              <a class="" href="{% url 'login' %}">Log In</a>
+              <a class="" href="{% url 'signup' %}">Sign Up</a>
+          {% endif %}
+      </div>
+  </div>
+</nav> 
+

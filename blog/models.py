@@ -16,6 +16,7 @@ class Post(models.Model):
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("Category", related_name="posts")
     image = models.ImageField(null=True, blank=True)
+    # like = models.IntegerField(default=0)
 
 
     def __str__(self):

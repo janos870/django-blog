@@ -14,7 +14,7 @@
                 </a>
               {% endif %}
               <div class="card-body">
-                <h5 class="ms-2"><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h5>
+                <h5><a class="ms-1" href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h5>
                 <small class="text-info">
                   {{ post.created_on.date }} | Categories:{% for category in post.categories.all %}
                     <a class="text-info " href="{% url 'blog_category' category.name %}">{{ category.name }}</a>

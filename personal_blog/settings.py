@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'personal_blog',
-    "blog",
+    'blog',
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -123,7 +124,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static/",  # Ebben a könyvtárban keressük a statikus fájlokat.
+    BASE_DIR / "static/", 
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles" 
