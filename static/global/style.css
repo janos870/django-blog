@@ -1,0 +1,123 @@
+/* default styles */
+:root {
+  --primary-light: #fff;
+  --secondary-light: #f8f9fa;
+  --primary-dark: #161616;
+  --secondary-dark: #1e1e1e;
+}
+body {
+  font-family: "ABeeZee";
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  overflow-x: hidden;
+  padding-top: 100px;
+}
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: bold;
+  margin: auto 15px;
+}
+a:hover {
+  color: var(--primary-dark);
+  opacity: 0.7;
+}
+
+/* navbar style */
+nav.navbar {
+  transition: background-color 0.3s ease;
+  opacity: 0.8;
+  z-index: 1;
+}
+.navbar-nav {
+  text-align: center;
+}
+.navbar-nav .ms-auto a {
+  margin: auto 10px;
+  letter-spacing: 1.2;
+}
+.navbar-toggler {
+  color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  margin-right: 15px;
+}
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  color: var(--primary-dark);
+}
+.change-background {
+  background-color: var(--secondary-light);
+}
+.blur-on-scroll {
+  backdrop-filter: blur(10px);
+}
+@media (max-width: 768px) {
+  .navbar-nav a {
+    margin: 10px auto;
+    letter-spacing: 0.1em;
+  }
+  .navbar {
+    box-shadow: 1px 1px 15px 1px #8f8f8f;
+    margin: 10px;
+    border-radius: 20px;
+  }
+}
+
+/* footer style */
+.footer {
+  background-color: var(--secondary-light);
+}
+.footer a {
+  margin: 10px;
+}
+
+/* dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+  }
+  .change-background {
+    background-color: var(--secondary-dark);
+    backdrop-filter: blur(10px);
+  }
+  .footer {
+    background-color: var(--secondary-dark);
+  }
+  a {
+    color: var(--primary-light);
+  }
+  a:hover {
+    color: var(--primary-light);
+    opacity: 0.7;
+  }
+  .card {
+    background-color: var(--secondary-dark);
+  }
+  .comment-form .form-control,
+  .textarea {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+  }
+  form i {
+    color: var(--primary-light);
+  }
+  .comment-content {
+    background-color: var(--secondary-dark);
+  }
+  .navbar-toggler {
+    color: var(--primary-light);
+    border-color: var(--primary-light);
+    margin-right: 15px;
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      box-shadow: 1px 1px 15px 1px #111111;
+      background-color: var(--secondary-dark);
+    }
+  }
+}

@@ -23,7 +23,7 @@
 <!-- A navigációs sáv része -->
  <nav class="navbar navbar-expand-lg fixed-top py-3">
   <a class="navbar-brand d-flex align-content-center ms-lg-5" href="{% url 'blog_index' %}">
-      <img src="{% static '/favicon_io/favicon-32x32.png' %}" alt="" class="me-2 d-inline-block align-text-center" />
+      <img src="{% static '/img/favicon-32x32.png' %}" alt="" class="me-2 d-inline-block align-text-center" />
       My Personal Blog
   </a>
 
@@ -41,8 +41,8 @@
               <a class="" href="{% url 'logout' %}">Log Out</a>
               <a class="border rounded-pill px-3 py-2" href="#">Hi, {{ user.username }}!</a>
           {% else %}
-              <a class="" href="{% url 'login' %}">Log In</a>
-              <a class="" href="{% url 'signup' %}">Sign Up</a>
+              <a class="" href="{% url 'login' %}">Login</a>
+              {% comment %} <a class="" href="{% url 'signup' %}">Sign Up</a> {% endcomment %}
           {% endif %}
       </div>
   </div>

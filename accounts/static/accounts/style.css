@@ -1,0 +1,50 @@
+.login .card {
+    width: 500px;
+    margin: auto;
+    border: 0;
+    box-shadow: 1px 1px 15px 1px #8f8f8f;
+}
+
+.login .error {
+    background-color: rgb(255, 99, 99);
+    margin: 20px auto;
+    padding: 10px;
+    width: 500px;
+}
+
+.login, .signup .card .card-footer {
+    background: none;
+    border: 0;
+}
+
+.login input {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.signup .card {
+    width: 500px;
+    margin: auto;
+    border: 0;
+    box-shadow: 1px 1px 15px 1px #8f8f8f;
+}
+
+.signup input {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .login .card {
+        width: 100%;
+    }
+} 
+
+@media (prefers-color-scheme: dark) {
+    .login .card {
+        box-shadow: 1px 1px 15px 1px #111111;
+    }
+    .signup .card {
+        box-shadow: 1px 1px 15px 1px #111111;
+    }
+}
