@@ -21,7 +21,7 @@
     <div class="inputbx">
       <h3 class="my-5">Leave a comment:</h3>
       <div>{{ form.author }}</div>
-      <div>{{ form.body }}</div>  
+      <div>{{ form.body }}</div>
     </div>
     <button class="send-btn" type="submit"><i class="fa fa-send-o fa-2x text-info"></i></button>
   </form>
@@ -30,17 +30,17 @@
     <h3 class="my-5 ms-2">Comments:</h3>
     {% for comment in comments %}
       <div class="comment-content my-5">
-        <p class="text-info ">
+        <p class="text-info mx-2">
           On {{ comment.created_on.date }} <b>{{ comment.author }}</b> wrote:
         </p>
 
-        <div id="comment-text-{{ comment.id }}">
+        <div class="mx-2" id="comment-text-{{ comment.id }}">
           <span id="short-text-{{ comment.id }}">{{ comment.body|truncatechars:100|linebreaks }}</span>
           <span id="full-text-{{ comment.id }}" class="full-text" style="display: none;">{{ comment.body|linebreaks }}</span>
         </div>
 
         {% if comment.body|length > 100 %}
-          <button id="toggleBtn-{{ comment.id }}" class="toggle-btn text-info " onclick="toggleComment({{ comment.id }})">Show more</button>
+          <button id="toggleBtn-{{ comment.id }}" class="toggle-btn text-info" onclick="toggleComment({{ comment.id }})">Show more</button>
         {% endif %}
       </div>
     {% endfor %}

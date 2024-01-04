@@ -20,6 +20,7 @@
                     <a class="text-info " href="{% url 'blog_category' category.name %}">{{ category.name }}</a>
                   {% endfor %}
                 </small>
+                {% comment %} <p>{{ user.username }}</p> {% endcomment %}
                 <p class="card-text mt-3">{{ post.body|slice:':100' }}...</p>
               </div>
             </div>

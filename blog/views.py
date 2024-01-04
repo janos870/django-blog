@@ -2,6 +2,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from blog.models import Post, Comment
 from blog.forms import CommentForm
+from django.contrib.auth.decorators import login_required
+
 
 def blog_index(request):
     posts = Post.objects.all().order_by("-created_on")
@@ -32,7 +34,7 @@ def blog_detail(request, pk):
 
     return render(request, "blog/detail.html", context)
 
-
+@login_required
 def blog_detail(request, pk):
     post = Post.objects.get(pk=pk)
     form = CommentForm()
@@ -47,7 +49,7 @@ def blog_detail(request, pk):
             comment.save()
             return HttpResponseRedirect(request.path_info)
 
-    comments = Comment.objects.filter(post=post)
+    comments = Comment.objects.filter(post=post).order_by('-created_on')
     context = {
         "post": post,
         "comments": comments,
